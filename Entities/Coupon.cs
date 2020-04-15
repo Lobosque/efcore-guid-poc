@@ -3,7 +3,7 @@
 namespace GuidPoc.Entities {
     public class Coupon
     {
-        public string CouponId { get; private set; }
+        public Guid CouponId { get; private set; }
 
         public int CustomerId { get; set; }
 
@@ -11,7 +11,7 @@ namespace GuidPoc.Entities {
 
         public Coupon()
         {
-            CouponId = Guid.NewGuid().ToString();
+            CouponId = Guid.NewGuid();
         }
 
         public override string ToString()
